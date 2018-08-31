@@ -7,15 +7,31 @@
       :per-page="10"
     >
     </b-table>
+
+    <section>
+      <button class="button is-primary is-medium"
+        @click="isComponentModalActive = true">
+        ADD PERSON
+      </button>
+
+      <b-modal :active.sync="isComponentModalActive" has-modal-card>
+        <AddPerson @addPerson="addPerson" @handleChangeModal="handleChangeModal"></AddPerson>
+      </b-modal>
+    </section>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import AddPerson from '@/components/AddPerson'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'Home',
+  components: {
+    AddPerson
+  },
   data () {
     return {
+      isComponentModalActive: false,
       columns: [
         {
           field: 'id',
@@ -58,7 +74,19 @@ export default {
     }
   },
   created () {
-    this.$store.dispatch('getFirebaseDatabase')
+    this.getFirebaseDatabase()
+  },
+  methods: {
+    ...mapActions({
+      getFirebaseDatabase: 'getFirebaseDatabase',
+      setFirebaseDatabase: 'setFirebaseDatabase'
+    }),
+    addPerson (person) {
+      this.setFirebaseDatabase(person)
+    },
+    handleChangeModal () {
+      this.isComponentModalActive = !this.isComponentModalActive
+    }
   },
   computed: {
     ...mapGetters({

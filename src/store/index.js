@@ -30,6 +30,17 @@ const actions = {
       .catch((err) => {
         console.log('Error getting documents', err)
       })
+  },
+  async setFirebaseDatabase (_, person) {
+    await db.collection('persons').doc().set({
+      id: person.id,
+      title: person.title,
+      first_name: person.first_name,
+      last_name: person.last_name,
+      nickname: person.nickname,
+      tel: person.tel,
+      email: person.email
+    })
   }
 }
 
