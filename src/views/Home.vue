@@ -5,10 +5,11 @@
       :columns="columns"
       :paginated="true"
       :per-page="10"
+      default-sort="id"
     >
     </b-table>
 
-    <section>
+    <section class="t-al-center">
       <button class="button is-primary is-medium"
         @click="isComponentModalActive = true">
         ADD PERSON

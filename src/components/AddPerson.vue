@@ -115,6 +115,7 @@ export default {
           type: 'is-danger'
         })
       }
+      this.closeModal()
     },
     closeModal () {
       this.$emit('handleChangeModal')

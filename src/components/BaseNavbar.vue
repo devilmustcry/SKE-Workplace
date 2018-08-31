@@ -2,7 +2,7 @@
   <nav class="navbar navbar--black pd-10px" role="navigation" aria-label="main navigation" >
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
-        <h1 class="title cl-white">SKE</h1>
+        <h1 class="title cl-white">SKE12</h1>
       </a>
     </div>
     <div class="navbar-start">
