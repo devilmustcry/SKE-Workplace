@@ -9,7 +9,13 @@ import store from './store'
 import firebase from './services/firebase'
 import 'buefy/lib/buefy.css'
 import 'begeta/css/begeta.min.css'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAdTt1CEiELNaqxvQl7sgeHnpy9VskiosY'
+  }
+})
 Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(firebase)
