@@ -19,7 +19,7 @@ const mutations = {
 
 const actions = {
   getFirebaseDatabase ({commit}) {
-    db.collection('persons').get()
+    db.collection('users').get()
       .then((querySnapshot) => {
         const persons = []
         querySnapshot.forEach((doc) => {

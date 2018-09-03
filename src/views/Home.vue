@@ -35,7 +35,7 @@ export default {
       isComponentModalActive: false,
       columns: [
         {
-          field: 'id',
+          field: 'kuid',
           label: 'ID',
           width: '40',
           numeric: true,
@@ -47,12 +47,12 @@ export default {
           sortable: true
         },
         {
-          field: 'first_name',
+          field: 'firstname',
           label: 'First Name',
           sortable: true
         },
         {
-          field: 'last_name',
+          field: 'lastname',
           label: 'Last Name',
           sortable: true
         },

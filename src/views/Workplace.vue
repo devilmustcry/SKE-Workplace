@@ -1,26 +1,25 @@
 <template>
   <div class="workplace">
-    {{msg}}
-    <gmap-map :center="center" :zoom="10" style="width: 500px; height: 300px">
+    <gmap-map :center="center" :zoom="12" style="width: 1440px; height: 710px">
       <gmap-marker :key="index" v-for="(m, index) in markers" :position="m.position" :clickable="true" :draggable="false" @click="center=m.position">
       </gmap-marker>
     </gmap-map>
 
     <!-- <GmapMap
-  :center="{lat:10, lng:10}"
-  :zoom="7"
-  map-type-id="terrain"
-  style="width: 500px; height: 300px"
->
-  <GmapMarker
-    :key="index"
-    v-for="(m, index) in markers"
-    :position="m.position"
-    :clickable="true"
-    :draggable="true"
-    @click="center=m.position"
-  />
-</GmapMap> -->
+      :center="{lat:10, lng:10}"
+      :zoom="7"
+      map-type-id="terrain"
+      style="width: 500px; height: 300px"
+    >
+      <GmapMarker
+        :key="index"
+        v-for="(m, index) in markers"
+        :position="m.position"
+        :clickable="true"
+        :draggable="true"
+        @click="center=m.position"
+      />
+    </GmapMap> -->
   </div>
 </template>
 
